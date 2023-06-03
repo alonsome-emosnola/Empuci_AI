@@ -1,8 +1,7 @@
 // const express = require("express");
 // const mongoose = require("mongoose");
 const tele = require("./Telegram/telegram_model");
-// const ocr = require("./OCR/tesseract")
-
+// require("dotenv").config();
 
 // console.log(detect);
 // console.log(send);

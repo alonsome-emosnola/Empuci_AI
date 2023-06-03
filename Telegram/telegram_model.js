@@ -20,9 +20,9 @@ const config = {
     psm: 3
 }
 
-const detect = bot.onText(/\/chat (.+)/, (msg, match) => {
+bot.onText(/\/chat/, (msg, match) => {
     const chatId = msg.chat.id;
-    const resp = match[1];
+    const resp = `Welcome to my DM @${msg.from.username}, What would you like to talk about?`;
 
     return bot.sendMessage(chatId, resp);
 })
@@ -42,7 +42,7 @@ bot.on('photo', (msg) => {
     }
 })
 
-const send = bot.on('message', (msg) => {
+bot.on('message', (msg) => {
     if ('text' in msg){
         const chatId = msg.chat.id;
         const username = msg.from.username;
