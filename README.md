@@ -1,2 +1,2 @@
 # Empuci_Bot
- Telegram GPT AI Bot developed by Emmanuel Elusie.
+ Telegram GPT AI Bot developed by Alonsome Emosnola.
