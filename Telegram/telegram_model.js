@@ -30,7 +30,7 @@ bot.onText(/\/chat/, (msg, match) => {
 bot.on('photo', (msg) => {
     if ('photo' in msg){
         const chatId = msg.chat.id;
-        const img_id = msg.photo.at(-1).file_id;
+        const img_id = msg.photo[msg.photo.length - 1].file_id;
         bot.getFileLink(img_id).then(res => {
             tesseract.recognize(res, config).then((text) => {
                 return bot.sendMessage(chatId, `[EXTRACTED TEXT]: \n\n${text}`)
